@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RestuVivi - 06.10.2024</title>
+
+    <meta
+      name="description"
+      content="Pernikahan Restu & Vivi - 10 Oktober 2024 08:00 WIB. Mohon do'anya. 🙏"
+    />
+    <meta
+      name="keywords"
+      content="sanudin,nurfauziah,ziah,puji,wedding,website,bootstrap"
+    />
+    <meta name="author" content="Sanudin & Nurfauziah" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:image" content="images/og.png" />
+    <meta property="og:site_name" content="Sanudin & Nurfauziah - 08.06.2024" />
+    <meta property="og:title" content="Sanudin & Nurfauziah - 08.06.2024" />
+    <meta
+      property="og:description"
+      content="Pernikahan Sanudin & Nurfauziah - 08 Juni 2024 11:00 WIB. Mohon do'anya. 🙏"
+    />
+    <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <!-- Website to visit when clicked in fb or WhatsApp-->
+    <meta property="og:url" content="https://ziah.sanud.in" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Engagement&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body class="overflow-hidden">
+    <div class="spinner-wrapper position-fixed">
+      <div
+        class="d-flex justify-content-center align-items-center flex-column w-100 h-100"
+      >
+        <div class="spinner-border text-info"></div>
+        <strong role="status">Loading...</strong>
+      </div>
+    </div>
+
+    <nav
+      class="navigation position-fixed bottom-0 start-50 translate-middle px-2 col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4"
+    >
+      <div
+        class="container text-center px-3 px-sm-4 py-3 bg-danger-subtle border border-danger rounded-3 shadow"
+      >
+        <div class="row align-items-center">
+          <div class="col nav-home p-0">
+            <a
+              href="#home"
+              class="btn btn-outline-danger border-0 pb-0 d-flex flex-column align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                />
+              </svg>
+              <span>Home</span>
+            </a>
+          </div>
+
+          <div class="col nav-events p-0">
+            <a
+              href="#events"
+              class="btn btn-outline-danger border-0 pb-0 d-flex flex-column align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                />
+              </svg>
+              <span>Events</span>
+            </a>
+          </div>
+
+
+          <div class="col nav-gallery p-0">
+            <a
+              href="#gallery"
+              class="btn btn-outline-danger border-0 pb-0 d-flex flex-column align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M160 80H512c8.8 0 16 7.2 16 16V320c0 8.8-7.2 16-16 16H490.8L388.1 178.9c-4.4-6.8-12-10.9-20.1-10.9s-15.7 4.1-20.1 10.9l-52.2 79.8-12.4-16.9c-4.5-6.2-11.7-9.8-19.4-9.8s-14.8 3.6-19.4 9.8L175.6 336H160c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16zM96 96V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160c-35.3 0-64 28.7-64 64zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+                />
+              </svg>
+              <span>Gallery</span>
+            </a>
+          </div>
+
+          <div class="col nav-wishes p-0">
+            <a
+              href="#wishes"
+              class="btn btn-outline-danger border-0 pb-0 d-flex flex-column align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384l0 0-.9 0c.3 0 .6 0 .9 0z"
+                />
+              </svg>
+              <span>Wishes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="pt-5 text-center h-100 overlay">
+        <div class="row h-100 m-0">
+          <div class="container pt-5 text-white col align-self-center">
+            <p class="h5">The Wedding of</p>
+            <h1
+              class="title display-1"
+              data-bs-toggle="tooltip"
+              data-bs-title="Sanudin & Nurfauziah"
+            >
+              Restu & Vivi
+            </h1>
+            <img
+              src="images/fprint.png"
+              class="img-fluid my-3"
+              alt="Fingerprint Love"
+            />
+            <h2 class="title pt-4 h4">16.10.2024</h2> 
+            <p class="col-lg-8 pt-4 mx-auto lead mb-4">
+              "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan
+              pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu
+              merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta
+              dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar
+              terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+              <br />(Ar-Rum: 21)
+            </p>
+          </div>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="p-5 text-center">
+        <h2 class="title display-4 mb-3">Events</h2>
+        <div class="mb-5 text-center to-wrapper d-none">
+          <div class="row align-items-center justify-content-center">
+            <div
+              class="h-100 px-4 py-3 bg-body-tertiary border rounded-3 col-12 col-lg-5 col-xl-4 m-2"
+            >
+              <h3 class="h5">Kepada Yth. Bapak/Ibu/Saudara/I</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="#828282"
+                  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                />
+              </svg>
+              <p class="h4 mt-2">
+                <b id="to-name"></b>
+              </p>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="title h3">Assalamu'alaikum Warahmatullah Wabarakatuh</h3>
+            <p class="h5">
+              Maha suci Allah yang telah menciptakan makhluk-Nya
+              berpasang-pasangan. <br />Ya Allah perkenankanlah kami untuk
+              mengikuti Sunnah Rasul-Mu dalam rangka membentuk keluarga yang
+              <b>sakinah, mawaddah, warahmah</b>
+            </p>
+          </div>
+        </div>
+              
+      <div class="container">
+
+          <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+          
+          <div class="names">
+              <h2>RESTU RAHARJO</h2>
+              <p class="parents">Putra dari Bapak H. selamet dan Alm. Ibu Juana</p>
+              
+              <h2>dan</h2>
+              
+              <h2>VIVI FEBRIYANI</h2>
+              <p class="parents">Putri dari Bapak Hosaini Prawiro dan Ibu Junaida</p>
+          </div>       
+        
+          <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+          
+          <p>Wassalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+      </div>
+      
+      </body>
+        <div class="row align-items-center justify-content-center">
+          <div
+            class="h-100 p-4 pt-20 bg-body-tertiary border rounded-3 col-12 col-lg-5 col-xl-4 m-2"
+          >
+            <h3 class="h4">Akad Nikah</h3>
+            <hr />
+            <div class="row">
+              <div class="col-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    fill="#828282"
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                  />
+                </svg>
+                <p class="h5">Rabu, 16 Oktober 2024</p>
+              </div>
+              <div class="col-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    fill="#828282"
+                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                  />
+                </svg>
+                <p class="h5">08:00 WIB - Selesai</p>
+              </div>
+            </div>
+            <p class="h5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="#828282"
+                  d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
+                />
+              </svg>
+              <br />Kediaman Bapak Hosaini Prawiro <br />
+              <b>Desa Selokgondang, Kec sukodono, Kab Lumajang</b>
+            </p>
+            <a
+              href="https://maps.app.goo.gl/rd3hEwd2nKRUKysk9"
+              class="btn btn-danger mt-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="h4 pe-1">Buka Maps</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="#fff"
+                  d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="h-100 p-4 pt-3 bg-body-tertiary border rounded-3 col-12 col-lg-5 col-xl-4 m-2"
+          >
+            <h3 class="h4">Resepsi</h3>
+            <hr />
+            <div class="row">
+              <div class="col-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    fill="#828282"
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                  />
+                </svg>
+                <p class="h5">Rabu, 17 Oktober 2024</p>
+              </div>
+              <div class="col-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    fill="#828282"
+                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                  />
+                </svg>
+                <p class="h5">10:00 WIB - Selesai</p>
+              </div>
+            </div>
+            <p class="h5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="#828282"
+                  d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
+                />
+              </svg>
+              <br />Kediaman Bapak Hosaini Prawiro <br />
+              <b>Desa Selokgondang, Kec sukodono, Kab Lumajang</b>
+            </p>
+            <a
+              href="https://maps.app.goo.gl/rd3hEwd2nKRUKysk9"
+              class="btn btn-danger mt-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="h4 pe-1">Buka Maps</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="#fff"
+                  d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="py-5 text-center">
+        <h2 class="title display-4 mb-5">Gallery</h2>
+        <div class="carousel-wrapper">
+          <div
+            id="carouselGallery"
+            class="carousel slide h-100"
+            data-bs-ride="carousel"
+          >
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Wedding Photo Slider</title>
+            <style>
+              * {
+                box-sizing: border-box;
+              }
+          
+              body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+              }
+          
+              .slider {
+                position: relative;
+                max-width: 800px;
+                margin: auto;
+                overflow: hidden;
+              }
+          
+              .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+              }
+          
+              .slides img {
+                width: 100%;
+                border-radius: 10px;
+              }
+          
+              .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 16px;
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+                font-size: 18px;
+                border: none;
+                border-radius: 50%;
+              }
+          
+              .prev {
+                left: 10px;
+              }
+          
+              .next {
+                right: 10px;
+              }
+            </style>
+          </head>
+          <body>
+          
+          <div class="slider">
+            <div class="slides">
+              <img src="images/PW1.jpg" alt="Foto 1">
+              <img src="images/PW2.jpg" alt="Foto 2">
+              <img src="images/PW3.jpg" alt="Foto 3">
+              <img src="images/PW4.jpg" alt="Foto 4">
+              <img src="images/PW5.jpg" alt="Foto 5">
+            </div>
+          
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+          
+          <script>
+            let currentIndex = 0;
+          
+            function moveSlide(direction) {
+              const slides = document.querySelector('.slides');
+              const totalSlides = slides.children.length;
+          
+              currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+              slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+          </script>
+          
+          </body>
+       </div>
+    </section>
+
+    <section id="wishes" class="send-message">
+      <div class="p-5 text-center">
+        <h2 class="title display-4 mb-3">Kirim Ucapan Selamat</h2>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <form id="form-send-message">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                />
+                <label for="name" class="form-label h6">Nama</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control h-25"
+                  id="message"
+                  name="message"
+                  placeholder="Tulis pesan ..."
+                ></textarea>
+                <label for="message" class="h6">Pesan</label>
+              </div>
+              <button
+                type="submit"
+                id="btn-send-message"
+                class="btn btn-danger mb-3 w-100"
+              >
+                <span class="h4 pe-1">Kirim</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    fill="#fff"
+                    d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"
+                  />
+                </svg>
+              </button>
+              <button
+                id="btn-send-message-loading"
+                class="btn btn-danger w-100 d-none"
+                type="button"
+                disabled
+              >
+                <span role="status"><span class="h4">Loading...</span></span>
+                <span
+                  class="spinner-border spinner-border-sm"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <hr />
+        <button
+          type="button"
+          id="btn-see-message"
+          class="btn btn-info text-white mt-4"
+        >
+          <span class="h5 me-1">Lihat Ucapan Selamat</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            width="24"
+            height="24"
+          >
+            <path
+              fill="currentColor"
+              d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z"
+            />
+          </svg>
+        </button>
+        <button
+          id="btn-see-message-loading"
+          class="btn btn-info text-white mt-4 d-none"
+          type="button"
+          disabled
+        >
+          <span role="status"><span class="h5">Loading...</span></span>
+          <span
+            class="spinner-border spinner-border-sm"
+            aria-hidden="true"
+          ></span>
+        </button>
+      </div>
+    </section>
+
+    <section id="bank-info" class="bank-info">
+      <div class="p-5 text-center">
+        <h2 class="title display-4">Amplop Digital</h2>
+        <p class="h5">
+          Do'a restu Anda merupakan karunia yang sangat berarti bagi kami
+        </p>
+        <p class="h5">
+          Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi
+          kado secara cashless dengan mengirim amplop digital secara transfer
+          pada akun di bawah ini :
+        </p>
+        <div class="pt-3 row align-items-center justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 my-2 card-wrapper">
+            <div class="card">
+              <div class="align-self-center card-image w-100">
+                <img
+                  src="images/bri.png"
+                  class="card-img-top pt-4 w-50"
+                  alt="Sanudin BCA"
+                />
+              </div>
+              <div class="card-body pb-4">
+                <h5 class="card-title">
+                  Silahkan transfer ke <br />
+                  rekening a.n <b>Junaida</b>
+                </h5>
+                <h6 class="card-subtitle mb-3 text-body-secondary h5">
+                  0044 0109 4914 508
+                </h6>
+                <button
+                  type="button"
+                  class="btn btn-warning copy"
+                  data-no="0044 0109 4914 508"
+                  data-bs-toggle="tooltip"
+                  data-bs-title="Copy Rekening"
+                >
+                  Copy no. rekening
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-content d-none">
+      <!-- Bottom content for search engine -->
+      <p>Pernikahan Restu dan Vivi pada tanggal 16 OKtober 2024.</p>
+    </section>
+
+    <footer class="footer text-center bg-dark pt-5">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <section class="d-flex align-items-center justify-content-center">
+          <div class="sanudin me-5">
+            <a
+              rel="noreferrer"
+              href="https://www.instagram.com/resturhrjo/"
+              class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank"
+              data-bs-toggle="tooltip"
+              data-bs-title="Instagram Sanudin"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="32"
+                height="32"
+              >
+                <path
+                  fill="#fff"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+              <br />
+              Restu Raharjo</a
+            >
+          </div>
+          <div class="ziah ms-5">
+            <a
+              rel="noreferrer"
+              href="https://www.instagram.com/vivifebri_/"
+              class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank"
+              data-bs-toggle="tooltip"
+              data-bs-title="Instagram Nurfauziah"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="32"
+                height="32"
+              >
+                <path
+                  fill="#fff"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+              <br />
+              Vivi Febriyani
+            </a>
+          </div>
+        </section>
+        <hr class="w-50" />
+        <p class="m-0 copyright">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          - Terima kasih ucapannya!<br />Kami do'akan agar Anda sehat selalu.
+          aamiin
+           </p>
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <div class="position-fixed z-3 bottom-0 end-0 me-4 mb-4 d-none d-md-block">
+      <button
+        type="button"
+        id="go-to-top"
+        class="btn btn-secondary"
+        style="display: none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+          width="24"
+          height="24"
+        >
+          <path
+            fill="#fff"
+            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      class="toast-container position-fixed top-0 start-50 translate-middle mt-5"
+    >
+      <div
+        id="toastSendMsg"
+        class="toast align-items-center text-bg-success border-0 mt-5"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-autohide="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body h6 m-0">
+            Terima kasih ucapannya!<br />Kami do'akan agar Anda sehat selalu.
+            aamiin
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+
+      <div
+        id="toastError"
+        class="toast align-items-center text-bg-danger border-0 mt-5"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-autohide="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body h6 m-0">Terjadi Kesalahan!</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="messages"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="messagesLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 w-100 text-center" id="messagesLabel">
+              Terima kasih ucapannya!<br />Kami do'akan agar Anda sehat selalu.
+              aamiin.
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer justify-content-center">
+            <div class="row">
+              <div class="col-auto">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="filter-name"
+                  placeholder="Nama"
+                />
+                <label for="filter-name" class="form-label h6 visually-hidden"
+                  >Nama</label
+                >
+              </div>
+              <div class="col-auto flex-shrink-1">
+                <button
+                  type="button"
+                  id="btn-see-message-filter"
+                  class="btn btn-primary mb-3"
+                >
+                  Filter by Nama
+                </button>
+              </div>
+            </div>
+            <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
